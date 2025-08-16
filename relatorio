@@ -4,12 +4,12 @@ Esse projeto é um jogo sudoku simples com linguagem python, onde fiz um jogo de
 A ideia era ter um tabuleiro inicial com alguns números já preenchidos e  outros vazios (usei o número 0 para representar os espaços vazios), 
 e depois criar um código capaz de resolver o tabuleiro.
 Estrutura do código O código tem algumas partes principais: Tabuleiro inicial É uma matriz (lista de listas em Python) que guarda os números do jogo.
-O número 0 significa espaço vazio. Função mostrar responsável por imprimir o tabuleiro na tela. Onde tiver 0, aparece um ponto (.) para ficar mais visual.
-Função válida verifica se um número pode ser colocado em determinada posição. Checa: Linha Coluna Quadradinho 2x2 do Sudoku Se o número já existir em alguns desses
-lugares, não pode ser colocado. Função resolver Usa recursão  para preencher os espaços vazios. Ela tenta colocar números de 1 a 4 nos espaços, e se não der certo,
-volta atrás e tenta outro número. Execução final O programa mostra o tabuleiro inicial. Depois chama a função resolver. Se o tabuleiro tiver solução,
-mostre o resultado; se não tiver, escreve "Você perdeu!". O que aprendi fazendo foi primcipalmente como representar um jogo de Sudoku em Python usando listas e
-também um icentivo á revisar os materiais de aulas passadas. Como deixar a exibição mais amigável (trocando 0 por ponto). 
-Também percebi que nem todo tabuleiro inicial é válido, então é importante montar um Sudoku que realmente tenha solução. Pontos fortes do código Simples e direto:
-Poucas funções já resolvem o problema. Dá pra usar como base para versões maiores (tipo 9x9). Mostra bem uma ideia de lógica e recursão. Limitações O jogador interage. 
-Só funciona para Sudoku 4x4 do jeito que está. Não tem verificação visual bonita (é só texto no terminal).
+O número 0 significa espaço vazio. Função mostrar responsável por imprimir o tabuleiro na tela. Onde tiver 0, aparece um ponto (.) para ficar mais visual. 
+Função válida verifica se um número pode ser colocado em determinada posição. Checa: Linha Coluna Quadradinho 2x2 do Sudoku se o número já existir
+em alguns desses lugares, não pode ser colocado. Função resolver Usa recursão  para preencher os espaços vazios. Ela tenta colocar números de 1 a 4 nos espaços,
+e se não der certo, volta atrás e tenta outro número. Execução final O programa mostra o tabuleiro inicial. Depois chama a função resolver. Se o tabuleiro tiver solução
+, mostre o resultado; se não tiver, escreve "Você perdeu!". O que aprendi fazendo foi principalmente como representar um jogo de Sudoku em Python usando
+listas e também um incentivo á revisar os materiais de aulas passadas. Como deixar a exibição mais amigável (trocando 0 por ponto). 
+Também percebi que nem todo tabuleiro inicial é válido, então é importante montar um Sudoku que realmente tenha solução. Pontos fortes do código:
+Poucas funções já resolvem o problema. Dá pra usar como base para versões maiores (tipo 9x9). Mostra bem uma ideia de lógica e recursão.
+Limitações O jogador interage. Só funciona para Sudoku 4x4 do jeito que está. Não tem verificação visual bonita (é só texto no terminal)
