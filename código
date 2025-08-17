@@ -1,0 +1,46 @@
+tabuleiro = [
+    [1, 0, 3, 0],
+    [0, 4, 0, 2],
+    [2, 0, 4, 0],
+    [0, 3, 0, 1]
+]
+
+def mostrar(tabu):
+    for linha in tabu:
+        print(*("." if v == 0 else v for v in linha))
+    print()
+
+def valido(tabu, linha, coluna, num):
+    for i in range(4):
+        if tabu[linha][i] == num or tabu[i][coluna] == num:
+            return False
+    inicio_linha = (linha // 2) * 2
+    inicio_coluna = (coluna // 2) * 2
+    for i in range(2):
+        for j in range(2):
+            if tabu[inicio_linha + i][inicio_coluna + j] == num:
+                return False
+    return True
+
+def resolver(tabu):
+    for i in range(4):
+        for j in range(4):
+            if tabu[i][j] == 0:
+                for num in range(1, 5):
+                    if valido(tabu, i, j, num):
+                        tabu[i][j] = num
+                        if resolver(tabu):
+                            return True
+                        tabu[i][j] = 0
+                return False
+    return True
+
+print("Tabuleiro inicial:")
+mostrar(tabuleiro)
+
+if resolver(tabuleiro):
+    print("Tabuleiro resolvido:")
+    mostrar(tabuleiro)
+else:
+    print("Está incorreto")
+
